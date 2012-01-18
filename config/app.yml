@@ -1,0 +1,3 @@
+all:
+  foursquare:
+    api_key: XXX
