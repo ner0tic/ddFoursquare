@@ -14,7 +14,6 @@ class ddFoursquare extends fourSquare {
     $authorizeUrl       = 'https://foursquare.com/oauth2/authorize',
     $apiUrl             = 'https://api.foursquare.com';
   protected 
-    $userAgent          = 'ddFoursquare',
     $apiVersion         = 'v2',
     $isAsynchronous     = false,
     $followLocation     = false,
@@ -29,10 +28,8 @@ class ddFoursquare extends fourSquare {
     if($connectionTimeout !== null)
       $this->connectionTimeout = floatval($connectionTimeout);
   }
-  public function setUserAgent($agent) { $this->userAgent = $agent; }
   public function useApiVersion($version = null) { $this->apiVersion = $version; }
   public function useAsynchronous($async = true) { $this->isAsynchronous = (bool)$async; }
-
   
   public function delete($endpoint, $params = null) { return $this->request('DELETE', $endpoint, $params); }
   public function get($endpoint, $params = null) { return $this->request('GET', $endpoint, $params); }
