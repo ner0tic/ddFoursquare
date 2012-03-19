@@ -1,4 +1,4 @@
-9*<?php
+<?php
 
 /**
  * ddFoursquare
@@ -21,7 +21,6 @@ class ddFoursquare extends fourSquare {
     $requestTimeout     = 30,
     $debug              = false;
 
-  public function setAccessToken($accessToken) { $this->accessToken = $accessToken; }
   public function setTimeout($requestTimeout = null, $connectionTimeout = null) {
     if($requestTimeout !== null)
       $this->requestTimeout = floatval($requestTimeout);
