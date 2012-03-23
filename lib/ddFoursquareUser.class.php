@@ -97,11 +97,26 @@ class ddFoursquareUser { //extends ddFoursquareBase {
     $this->relationship = $r;
     return $this;
   }
+  public function setType($t) {
+    $this->type = $t;
+    return $this;
+  }
+  public function setTwitter($t) {
+    $this->contact['twitter'] = $t;
+    return $this;
+  }
+  public function setPhone($p) {
+    $this->contact['phone'] = $p;
+    return $this;
+  }
+  public function setPhotos($p) {
+    $this->photos = array_merge($this->photos,$p);
+  }
   public function setTips($t = array()) {
     $this->tips = array_merge($this->tips,$t);
     return $this;
-    }
   }
+  //public function 
 }
 
 ?>
